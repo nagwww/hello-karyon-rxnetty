@@ -74,10 +74,6 @@ task packDeb(type: Deb) {
   version = '1'
   release '1'
 
-  requires('openjdk-7-jre-headless')
-  from('build/libs/.') {
-    into "/opt/${project.name}"
-  }
 
   // installer scripts
   preInstall = file('pkg_scripts/preInstall.sh')
